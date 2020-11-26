@@ -1,14 +1,15 @@
 // Code your testbench here
 // or browse Examples
-`define n 16
+
 module N_full_adder_tb();
-  reg [(`n-1):0]a,b;
+parameter n = 16;
+  reg [(n-1):0]a,b;
   reg cin;
-  wire [(`n-1):0]sum;
+  wire [(n-1):0]sum;
   wire cout;
   N_bit_adder DUT(.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
 
-  task inputs(input[(`n-1):0] x,y,
+  task inputs(input[(n-1):0] x,y,
               input z);
 begin
 {a,b,cin} = {x,y,z};
