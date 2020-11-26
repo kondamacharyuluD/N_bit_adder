@@ -5,8 +5,7 @@ output [(`n-1):0]sum,
 output cout);
 
 wire [(`n-1):0]w;
-//wire k;
-//assign k = cin;
+
 genvar i;
 
 full_adder fa0(a[0],b[0],cin,sum[0],w[0]);
